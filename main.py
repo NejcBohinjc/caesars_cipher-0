@@ -1,3 +1,6 @@
+# add brute force mode
+# add shift amount as input
+
 dec = False
 
 shift = 3
@@ -21,17 +24,37 @@ def enc_or_dec():
   
   return inp
 
-user_input = enc_or_dec()
+enc_dec = enc_or_dec()
+
+usr_in = input("Enter you phrase: ")
 
 
 #this function encodes the input
-def encode(inp):
-  #string
+def encode(inp,us_in_lc):
   l0 = []
-  for letter in inp:
+  for letter in us_in_lc:
     l0.append(letter)
 
-def decode(inp):
+  new_l = []
+  for ele in l0:
+    #first convert to lower case and then upper case
+    if ele.isupper(): # letter is uppercase
+      ele = ele.islower()
+    # we convert the letter to ascii
+    ord_ele = ord(ele)
+    # we shift the ascii value of the letter for the shift value
+    ord_ele += shift
+    ord_ele = chr(ord_ele)
+    new_l.append(ord_ele.lower())
+  
+  #join the list together and return the encoded word
+  encoded_word = "".join(new_l)
+  print(encoded_word)
+  return encoded_word
+
+
+
+def decode(inp,us_in_lc):
   print("dec")
     
 
@@ -39,9 +62,9 @@ def decode(inp):
 
 #decode
 if dec:
-  decode(user_input)
+  decode(enc_dec,usr_in)
 else:
-  encode(user_input)
+  encode(enc_dec,usr_in)
 
 
 enc_or_dec()
