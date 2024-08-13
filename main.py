@@ -1,5 +1,7 @@
+# TODO
 # add brute force mode
 # add shift amount as input
+# add a decode function
 
 dec = False
 
