@@ -39,7 +39,7 @@ def encode(inp,us_in_lc):
   for ele in l0:
     #first convert to lower case and then upper case
     if ele.isupper(): # letter is uppercase
-      ele = ele.islower()
+      ele = ele.lower()
     # we convert the letter to ascii
     ord_ele = ord(ele)
     # we shift the ascii value of the letter for the shift value
