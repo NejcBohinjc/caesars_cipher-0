@@ -42,18 +42,12 @@ def enc_or_dec():
     inp = input(" \"enc\" to encode, \"dec\" to decode: ")
     if inp == "dec":
       decode(usr_in)
-      #dec = True # decode
-      #cor = True
     elif inp != "enc":
       print("Incorrect input. \n")
     else:
       encode(usr_in)
-      #dec = False
-      #cor = True
   
   return inp
-
-#enc_dec = enc_or_dec()
 
 
 
