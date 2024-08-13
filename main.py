@@ -1,5 +1,7 @@
 dec = False
 
+shift = 3
+
 # decides to decode or encode
 def enc_or_dec():
   cor = False #checks if the input was correct
@@ -14,8 +16,32 @@ def enc_or_dec():
     elif inp != "enc":
       print("Incorrect input. \n")
     else:
+      dec = False
       cor = True
+  
+  return inp
 
+user_input = enc_or_dec()
+
+
+#this function encodes the input
+def encode(inp):
+  #string
+  l0 = []
+  for letter in inp:
+    l0.append(letter)
+
+def decode(inp):
+  print("dec")
+    
+
+
+
+#decode
+if dec:
+  decode(user_input)
+else:
+  encode(user_input)
 
 
 enc_or_dec()

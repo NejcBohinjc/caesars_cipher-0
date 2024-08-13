@@ -1,0 +1,2 @@
+- dodaj da lahko dodaš še zamik za koliko črk se zamakne za
+- dodaj način brute force, ki gre čez vse zamike
