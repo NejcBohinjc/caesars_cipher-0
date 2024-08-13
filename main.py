@@ -5,34 +5,12 @@ dec = False
 
 shift = 3
 
-# decides to decode or encode
-def enc_or_dec():
-  cor = False #checks if the input was correct
-  
-  # this checks if the user chooses to decode or encode
-
-  while cor == False:
-    inp = input(" \"enc\" to encode, \"dec\" to decode: ")
-    if inp == "dec":
-      dec = True # decode
-      cor = True
-    elif inp != "enc":
-      print("Incorrect input. \n")
-    else:
-      dec = False
-      cor = True
-  
-  return inp
-
-enc_dec = enc_or_dec()
-
 usr_in = input("Enter you phrase: ")
 
-
 #this function encodes the input
-def encode(inp,us_in_lc):
+def encode(user_input_local):
   l0 = []
-  for letter in us_in_lc:
+  for letter in user_input_local:
     l0.append(letter)
 
   new_l = []
@@ -51,17 +29,34 @@ def encode(inp,us_in_lc):
 
 
 
-def decode(inp,us_in_lc):
+
+# decides to decode or encode
+def enc_or_dec():
+  cor = False #checks if the input was correct
+  
+  # this checks if the user chooses to decode or encode
+
+  while cor == False:
+    inp = input(" \"enc\" to encode, \"dec\" to decode: ")
+    if inp == "dec":
+      decode(usr_in)
+      #dec = True # decode
+      #cor = True
+    elif inp != "enc":
+      print("Incorrect input. \n")
+    else:
+      encode(usr_in)
+      #dec = False
+      #cor = True
+  
+  return inp
+
+#enc_dec = enc_or_dec()
+
+
+
+def decode(inp,user_input_local):
   print("dec")
     
-
-
-
-#decode
-if dec:
-  decode(enc_dec,usr_in)
-else:
-  encode(enc_dec,usr_in)
-
 
 enc_or_dec()
