@@ -10,7 +10,7 @@ usr_in = input("Enter you phrase: ")
 # returns if the function should encode or decode
 def enc_or_dec():
   while True:
-    inp = input(" \"enc\" to encode, \"dec\" to decode: ")
+    inp = input("\"enc\" to encode, \"dec\" to decode: ")
     if inp == "dec" or inp == "enc" or inp == "brute":
       return inp
     else:
@@ -44,5 +44,11 @@ def encode(user_input_local):
   print(encoded_word)
   return encoded_word
 
+def brute_force(user_input_local):
+  print("brute force mode")
 
-encode(usr_in)
+
+if usr_in != "brute":
+  encode(usr_in)
+else:
+  brute_force(usr_in)
