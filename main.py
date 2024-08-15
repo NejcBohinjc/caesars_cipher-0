@@ -1,5 +1,4 @@
 # TODO
-# add brute force mode
 # make sure that the letter go from a-z and don't include other ascii characters
 
 from math import floor
