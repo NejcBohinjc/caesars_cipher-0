@@ -14,7 +14,7 @@ def brute_force(user_input_local):
   
 
   # this goes trough the whole english alphabet
-  for shift in range(1,26):
+  for shift in range(1,24):
     new_l = []
     for ele in l0:
       ord_ele = ord(ele)
