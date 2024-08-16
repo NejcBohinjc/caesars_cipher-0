@@ -53,10 +53,8 @@ def encode(user_input_local):
     
     #check if element is lowercaser or uppercase
     if ele.islower(): #lowercase
-      ele_lower = True
       ascii_range = tuple(range(97,123))
     elif ele.isupper(): #uppercase
-      ele_upper = True
       ascii_range = tuple(range(65,91))
 
 
@@ -64,16 +62,18 @@ def encode(user_input_local):
     #decode
     if user_input == "dec":
         for i in range(shift):
+          ord_ele -= 1
           if ord_ele < min(ascii_range):
             ord_ele = max(ascii_range)
-          ord_ele -= 1
+
+          
           
     #encode
     elif user_input == "enc":
+        ord_ele += 1
         for i in range(shift):
           if ord_ele > max(ascii_range):
             ord_ele = min(ascii_range)
-          ord_ele += 1
 
     ord_ele = chr(ord_ele)
     new_l.append(ord_ele)
