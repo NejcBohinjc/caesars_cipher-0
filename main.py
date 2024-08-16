@@ -46,8 +46,23 @@ def encode(user_input_local):
 
   new_l = []
   for ele in l0:
+    ele_lower = False
+    ele_upper = False
     # we convert the letter to ascii
     ord_ele = ord(ele)
+    
+    #check if element is lowercaser or uppercase
+    if ele.islower(): #lowercase
+      ele_lower = True
+      ascii_range = tuple(range(97,123))
+    elif ele.isupper(): #uppercase
+      ele_upper = True
+      ascii_range = tuple(range(65,91))
+
+
+
+
+
     # we shift the ascii value of the letter for the shift value
     #decode
     if user_input == "dec": 
