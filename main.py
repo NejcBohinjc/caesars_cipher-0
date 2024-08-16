@@ -60,9 +60,6 @@ def encode(user_input_local):
       ascii_range = tuple(range(65,91))
 
 
-
-
-
     # we shift the ascii value of the letter for the shift value
     #decode
     if user_input == "dec":
@@ -73,7 +70,10 @@ def encode(user_input_local):
           
     #encode
     elif user_input == "enc":
-      ord_ele += shift
+        for i in range(shift):
+          if ord_ele > max(ascii_range):
+            ord_ele = min(ascii_range)
+          ord_ele += 1
 
     ord_ele = chr(ord_ele)
     new_l.append(ord_ele)
