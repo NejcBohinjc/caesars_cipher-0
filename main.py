@@ -65,8 +65,12 @@ def encode(user_input_local):
 
     # we shift the ascii value of the letter for the shift value
     #decode
-    if user_input == "dec": 
-      ord_ele -= shift
+    if user_input == "dec":
+        for i in range(shift):
+          if ord_ele < min(ascii_range):
+            ord_ele = max(ascii_range)
+          ord_ele -= 1
+          
     #encode
     elif user_input == "enc":
       ord_ele += shift
