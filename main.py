@@ -32,6 +32,7 @@ shift = floor(int(input("Enter the shift amount: ")))
 def enc_or_dec():
   while True:
     inp = input("\"enc\" to encode, \"dec\" to decode, \"brute\" to brute force: ")
+    inp = inp.lower()
     if inp == "dec" or inp == "enc" or inp == "brute":
       return inp
     else:
