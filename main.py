@@ -1,23 +1,28 @@
-# TODO
-# make sure that the letter go from a-z and don't include other ascii characters for brute force mode
-
 from math import floor
 
 
 def brute_force(user_input_local):
-  print("brute force mode")
 
   l0 = []
   for letter in user_input_local:
     l0.append(letter)
   
 
-  # this goes trough the whole english alphabet
+  # this goes through the whole english alphabet
   for shift in range(1,26):
     new_l = []
     for ele in l0:
+      if ele.islower(): #lowercase
+        ascii_range = tuple(range(97,123))
+      elif ele.isupper(): #uppercase
+        ascii_range = tuple(range(65,91))
+
       ord_ele = ord(ele)
-      ord_ele -= shift
+      for i in range(shift):
+          ord_ele -= 1
+          if ord_ele < min(ascii_range):
+            ord_ele = max(ascii_range)
+        
       ord_ele = chr(ord_ele)
       new_l.append(ord_ele)
     print(f'{shift}: {"".join(new_l)} \n')
@@ -48,8 +53,6 @@ def encode(user_input_local):
 
   new_l = []
   for ele in l0:
-    ele_lower = False
-    ele_upper = False
     # we convert the letter to ascii
     ord_ele = ord(ele)
     
