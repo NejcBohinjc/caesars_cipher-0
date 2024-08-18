@@ -1,6 +1,7 @@
 # TODO
 # make sure that the letter go from a-z and don't include other ascii characters for brute force mode
 # the script should first ask you what you want to do, and not the shift amount
+# make sure that the script work for upper and lower case input e.g. ENC
 
 from math import floor
 
@@ -71,8 +72,8 @@ def encode(user_input_local):
           
     #encode
     elif user_input == "enc":
-        ord_ele += 1
         for i in range(shift):
+          ord_ele += 1
           if ord_ele > max(ascii_range):
             ord_ele = min(ascii_range)
 
