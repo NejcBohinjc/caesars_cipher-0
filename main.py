@@ -1,6 +1,5 @@
 # TODO
 # make sure that the letter go from a-z and don't include other ascii characters for brute force mode
-# the script should first ask you what you want to do, and not the shift amount
 
 from math import floor
 
@@ -14,7 +13,7 @@ def brute_force(user_input_local):
   
 
   # this goes trough the whole english alphabet
-  for shift in range(1,24):
+  for shift in range(1,26):
     new_l = []
     for ele in l0:
       ord_ele = ord(ele)
@@ -25,7 +24,6 @@ def brute_force(user_input_local):
     
 
 usr_phrase = input("Enter you phrase: ")
-shift = floor(int(input("Enter the shift amount: ")))
 
 # returns if the function should encode or decode
 def enc_or_dec():
@@ -38,6 +36,8 @@ def enc_or_dec():
       print("Incorrect input. \n")
   
 user_input = enc_or_dec()
+if user_input != "brute":
+  shift = floor(int(input("Enter the shift amount: ")))
   
 def encode(user_input_local):
   global user_input
