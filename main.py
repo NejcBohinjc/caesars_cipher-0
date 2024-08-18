@@ -1,5 +1,6 @@
 # TODO
 # make sure that the letter go from a-z and don't include other ascii characters for brute force mode
+# the script should first ask you what you want to do, and not the shift amount
 
 from math import floor
 
@@ -29,7 +30,7 @@ shift = floor(int(input("Enter the shift amount: ")))
 # returns if the function should encode or decode
 def enc_or_dec():
   while True:
-    inp = input("\"enc\" to encode, \"dec\" to decode, brute to brute force: ")
+    inp = input("\"enc\" to encode, \"dec\" to decode, \"brute\" to brute force: ")
     if inp == "dec" or inp == "enc" or inp == "brute":
       return inp
     else:
