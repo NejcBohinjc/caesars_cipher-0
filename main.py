@@ -1,7 +1,6 @@
 # TODO
 # make sure that the letter go from a-z and don't include other ascii characters for brute force mode
 # the script should first ask you what you want to do, and not the shift amount
-# make sure that the script work for upper and lower case input e.g. ENC
 
 from math import floor
 
