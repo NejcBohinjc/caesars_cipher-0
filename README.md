@@ -16,4 +16,4 @@ The script contains a feature called brute-force mode. Brute-force mode goes thr
 
 
 ## <a name="creator"> </a> Creator
-<a name="https://github.com/NejcBohinjc"> Nejc Bohinjc</a>
+[Nejc Bohinjc](#https://github.com/NejcBohinjc)
